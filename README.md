@@ -83,8 +83,6 @@ Exemplo de body:
 Os campos **title, genre, description e releaseYear** são obrigatórios.
  
 ---
- 
- Projeto desenvolvido para estudos no **SENAI**.
 
  
  
