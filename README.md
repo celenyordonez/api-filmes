@@ -1,86 +1,38 @@
-#  SenaiFlix API
- 
-API simples feita com **Node.js** e **Express** para gerenciar **filmes e séries**.
- 
-##  Tecnologias
- 
-* Node.js
-* Express
-* JavaScript
- 
-##  Instalação
- 
-```bash
-npm init -y
-npm i express
-```
- 
-Executar o servidor:
- 
-```bash
+
+
+###API REST simples para gerenciar tarefas utilizando Node.js e Express.
+
+##🚀 Tecnologias
+Node.js
+Express
+JavaScript
+##⚙️ Instalação
+npm i
+##▶️ Como executar
 node index.js
-```
- 
-Servidor em:
- 
-```
+
+##Servidor disponível em:
 http://localhost:3000
-```
- 
----
- 
-#  Rotas da API
- 
-## 🎥 Filmes
- 
-| Método | Rota               | Descrição                |
-| ------ | ------------------ | ------------------------ |
-| GET    | /filmes            | Lista todos os filmes    |
-| GET    | /filmes?genre=ação | Filtra filmes por gênero |
-| GET    | /filmes/:id        | Retorna um filme pelo ID |
-| POST   | /filmes            | Cria um novo filme       |
- 
-Exemplo de body:
- 
-```json
-{
-    "id": 1,
-    "title": "Interstellar",
-    "genre": "Ficção Científica",
-    "description": "As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.",
-    "releaseYear": 2014,
-    "image": "https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/aa5b9295-8f9c-44f5-809b-3f2b84badfbf/8a7dd34b09c9c25336a3d850d4c431455e1aaaf0.jpg?host=wbd-images.prod-vod.h264.io&partner=beamcom%22
-    }
-```
- 
----
- 
-##  Séries
- 
-| Método | Rota                | Descrição                 |
-| ------ | ------------------- | ------------------------- |
-| GET    | /series             | Lista todas as séries     |
-| GET    | /series?genre=drama | Filtra séries por gênero  |
-| GET    | /series/:id         | Retorna uma série pelo ID |
-| POST   | /series             | Cria uma nova série       |
- 
-Exemplo de body:
- 
-```json
-{
-    "id": 1,
-    "title": "Arcane",
-    "genre": "Animação",
-    "description": "Em meio ao conflito entre as cidades-gêmeas de Piltover e Zaun, duas irmãs lutam em lados opostos de uma guerra entre tecnologias mágicas e convicções incompatíveis.",
-    "releaseYear": 2021,
-    "image": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/36edcf0527cc1cafabecf5e27647b73e10c96cca-1920x1080.png?accountingTag=ARCANE%22
-    },
-```
- 
----
- 
- **Validação:**
-Os campos **title, genre, description e releaseYear** são obrigatórios.
+
+##📌 Rotas da API
+#📋 Tarefas
+|Método|	Rota | Descrição
+|GET	| /tarefas	|  Lista todas as tarefas
+|GET	| /tarefas/:id	| Buscar tarefa por ID
+|POST	| /tarefas	| Criar uma nova tarefa
+|PUT	| /tarefas/:id	| Atualizar uma tarefa
+|DELETE	| /tarefas/:id	| Remover uma tarefa
+##⚠️ Regras de Negócio
+Não permite criar tarefa com título vazio
+Não permite alterar tarefa já concluída
+Não permite concluir tarefa que já está concluída
+Cada tarefa possui ID único
+Retorna códigos HTTP corretos
+##📝 Notas
+
+Os dados são armazenados em memória
+(Reiniciar o servidor apaga todas as tarefas)
+
  
 ---
 
